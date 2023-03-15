@@ -24,7 +24,7 @@ public class UserController {
         String username = users.getUsername();
         if (username==null || username.isEmpty()){
             ApiError error =new ApiError(400, "vallidation error", "/api/1.0/users");
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error); // error objesinin body sini response entity olarak dönüyoruz
         }
         userService.save(users);
         GenericResponse response=new GenericResponse();
