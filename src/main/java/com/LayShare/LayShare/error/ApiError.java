@@ -1,5 +1,6 @@
 package com.LayShare.LayShare.error;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import java.util.Date;
@@ -15,7 +16,7 @@ public class ApiError {
 
     private  long timestap= new Date().getTime(); // hatanın zamanı ms cinsinden tutar
 
-    private Map<String,String> validationErrorss; // validation hatası key string değeri string bir map tutarız
+    private Map<String,String> validationErrors; // validation hatası key string değeri string bir map tutarız
 // json olarak tutulan bir response da tutulacak bu yüzden getter setterlar kullanıyoruz
     public  ApiError (int status, String message, String path) // constructer
     {
