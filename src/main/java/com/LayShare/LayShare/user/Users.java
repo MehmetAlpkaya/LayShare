@@ -9,7 +9,8 @@ import javax.persistence.Table;
 
 @Data
 @Entity
-public class Users {
+public class Users
+{
     @Id
     @GeneratedValue
     private long id;
