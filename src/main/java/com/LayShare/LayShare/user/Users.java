@@ -1,12 +1,15 @@
 package com.LayShare.LayShare.user;
 
-import com.sun.istack.NotNull;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Data
 @Entity
@@ -17,10 +20,13 @@ public class Users
     private long id;
 
     @NotNull
+    @Size(min=4, max = 255)
     private String username;
     @NotNull
+    @Size(min=4, max = 255)
     private String displayName;
-
+    @NotNull
+    @Pattern()// şefreye bir büyük bir küçük harf eklenmesi için kullanıldı
     private String password;
 
 
