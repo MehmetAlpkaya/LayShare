@@ -1,5 +1,6 @@
 package com.LayShare.LayShare.user;
 
+import com.sun.istack.NotNull;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -15,8 +16,11 @@ public class Users
     @GeneratedValue
     private long id;
 
+    @NotNull
     private String username;
+    @NotNull
     private String displayName;
+
     private String password;
 
 
