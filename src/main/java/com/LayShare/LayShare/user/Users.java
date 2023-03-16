@@ -21,12 +21,14 @@ public class Users
 
     @NotNull
     @Size(min=4, max = 255)
+    @UniqueUsername
     private String username;
     @NotNull
     @Size(min=4, max = 255)
     private String displayName;
     @NotNull
-    @Pattern()// şefreye bir büyük bir küçük harf eklenmesi için kullanıldı
+    @Size(min = 8, max = 10000)
+    @Pattern(regexp="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).*$")// şefreye bir büyük bir küçük harf eklenmesi için kullanıldı
     private String password;
 
 
