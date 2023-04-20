@@ -19,16 +19,16 @@ public class Users
     @GeneratedValue
     private long id;
 
-    @NotNull
+    @NotNull(message = "{LayShare.constraint.username.NotNull.message}")
     @Size(min=4, max = 255)
     @UniqueUsername
     private String username;
     @NotNull
     @Size(min=4, max = 255)
     private String displayName;
-    @NotNull
+    @NotNull(message = "{LayShare.constrain.password.Pattern.message}")
     @Size(min = 8, max = 10000)
-    @Pattern(regexp="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).*$")// şefreye bir büyük bir küçük harf eklenmesi için kullanıldı
+    @Pattern(regexp="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).*$")// şifreye bir büyük bir küçük harf eklenmesi için kullanıldı
     private String password;
 
 
