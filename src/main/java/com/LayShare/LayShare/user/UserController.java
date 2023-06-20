@@ -1,5 +1,4 @@
 package com.LayShare.LayShare.user;
-
 import com.LayShare.LayShare.error.ApiError;
 import com.LayShare.LayShare.shared.GenericResponse;
 import org.slf4j.Logger;

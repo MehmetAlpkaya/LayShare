@@ -5,6 +5,8 @@
 - Spring Security
 - Spring Rest
 - ReactJS
+- Bootstrap
+- Heroku
 
 ## Lessons steps
 > Spring MVC
