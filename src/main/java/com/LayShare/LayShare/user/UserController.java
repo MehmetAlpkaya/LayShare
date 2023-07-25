@@ -26,8 +26,8 @@ public class UserController {
     {
 
         userService.save(users);
-        GenericResponse response=new GenericResponse();
-        response.setMessage("User created");
+        GenericResponse response=new GenericResponse("User created");
+        
         return ResponseEntity.ok(response) ;
 
     }
