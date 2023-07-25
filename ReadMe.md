@@ -8,12 +8,3 @@
 - Bootstrap
 - Heroku
 
-## Lessons steps
-> Spring MVC
-
-### Reference Documentation
-* [GitHub]()
-
-```sh
-docker
-```
